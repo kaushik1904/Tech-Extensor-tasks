@@ -1,22 +1,24 @@
-let display = document.querySelector(".display");
+// with eval() funtion
 
-let buttons = Array.from(document.querySelectorAll(".btn"));
-// console.log(buttons);
+// let display = document.querySelector(".display");
 
-buttons.map((button) => {
-  button.addEventListener("click", (e) => {
-    let value = e.target.innerHTML;
+// let buttons = Array.from(document.querySelectorAll(".btn"));
+// // console.log(buttons);
+
+// buttons.map((button) => {
+//   button.addEventListener("click", (e) => {
+//     let value = e.target.innerHTML;
     
-    if (value == "C") {
-      display.innerHTML = " ";
-    } else if (value == "=") {
-      try {
-        display.innerHTML = eval(display.innerHTML);
-      } catch {
-        display.innerHTML = "ERROR!";
-      }
-    } else {
-      display.innerHTML += value;
-    }
-  });
-});
+//     if (value == "C") {
+//       display.innerHTML = " ";
+//     } else if (value == "=") {
+//       try {
+//         display.innerHTML = eval(display.innerHTML);
+//       } catch {
+//         display.innerHTML = "ERROR!";
+//       }
+//     } else {
+//       display.innerHTML += value;
+//     }
+//   });
+// });
