@@ -23,3 +23,4 @@ create calculator without eval() function
 
 # 07-02
 create Alarm clock using js
+Practice fetch api
