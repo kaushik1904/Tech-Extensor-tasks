@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Wallpoet&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #3c84ab;
+}
+
+.secondContainer {
+  width: 50%;
+  height: 320px;
+  background-color: white;
+  text-align: center;
+  border-radius: 2%;
+  padding: 20px 30px;
+}
+
+.curTime {
+  font-size: 30px;
+  margin: 20px;
+  font-family: "Wallpoet", cursive;
+  letter-spacing: 5px;
+}
+
+.setAlarm {
+  font-size: 20px;
+  margin: 20px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 5px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.form_input {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form_input input {
+  width: 100%;
+  margin: 0 10px;
+  padding: 5px 10px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #3c84ab;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  transition: all ease 0.5s;
+}
+
+.btn:hover {
+  transform: translateY(2px);
+  cursor: pointer;
+}
+
+.btn_reset {
+  display: none;
+  background-color: red;
+}
+
+@media screen and (max-width: 900px) {
+  .secondContainer {
+    padding: 10px 10px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .secondContainer {
+    width: 90%;
+  }
+  .form {
+    margin: 10px;
+  }
+  .curTime {
+    font-size: 20px;
+  }
+}

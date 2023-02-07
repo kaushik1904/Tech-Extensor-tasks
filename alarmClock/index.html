@@ -8,12 +8,36 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1 class="curTime"></h1>
+    <div class="container">
+      <div class="secondContainer">
+        <img src="./img/icons8-alarm-clock.gif" alt="" />
+        <br />
+        <h1 class="curTime"></h1>
 
-    <input type="time" name="time" id="alarm" step="2" />
-    <input type="button" value="Alarm" onclick="setAlarm()" />
+        <h2 class="setAlarm">Set Alarm</h2>
 
-    <h1 class="alarmTime"></h1>
+        <div class="form">
+          <div class="form_input">
+            <input type="text" class="hh" placeholder="Hours" />
+            <input type="text" class="mm" placeholder="Minute" />
+            <input type="text" class="ss" placeholder="Seconds" />
+          </div>
+          <input
+            class="btn btn_set"
+            type="button"
+            value="Set Alarm"
+            onclick="setAlarm()"
+          />
+          <input
+            class="btn btn_reset"
+            type="button"
+            value="Stop & Reset Alarm"
+            onclick="reset()"
+          />
+        </div>
+        <p class="onAlarm"></p>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

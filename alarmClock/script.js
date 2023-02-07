@@ -1,33 +1,39 @@
 let curTime = document.querySelector(".curTime");
 
-let h, m, hh, mm, ss;
+let h, m, s, hh, mm, ss;
 
-function setTime() {
+const setTime = () => {
   const d = new Date();
   h = parseInt(d.getHours());
   m = parseInt(d.getMinutes());
   s = parseInt(d.getSeconds());
-  curTime.innerHTML = `Current Time => ${h} : ${m} : ${s}`;
-}
+  curTime.innerHTML = `${h} : ${m} : ${s}`;
+};
+setInterval(setTime, 1000);
 
-setInterval(setTime, 500);
-
-function checkAlarm() {
-  console.log(hh, mm, ss);
+const checkAlarm = () => {
   if (h == hh && mm == m && ss == s) {
-    document.body.style.backgroundColor = "green";
-    clearInterval(checkAlarm);
-    return;
+    let stop = document.querySelector(".btn_set");
+    stop.style.display = "none";
+    document.querySelector(".btn_reset").style.display = "block";
   }
-}
+};
 
 const setAlarm = () => {
-  const alarm = document.querySelector("#alarm").value;
-  console.log(alarm);
-  hh = parseInt(alarm.substr(0, 2));
-  mm = parseInt(alarm.substr(3, 4));
-  ss = parseInt(alarm.substr(6, 7));
-  console.log(hh, mm, ss);
+  hh = parseInt(document.querySelector(".hh").value);
+  mm = parseInt(document.querySelector(".mm").value);
+  ss = parseInt(document.querySelector(".ss").value);
 
-  setInterval(checkAlarm, 500);
+  alert(`Alarm set on ${hh} : ${mm} : ${ss}.`);
+
+  setInterval(checkAlarm, 1000);
+};
+
+const reset = () => {
+  document.querySelector(".hh").value = "";
+  document.querySelector(".mm").value = "";
+  document.querySelector(".ss").value = "";
+
+  document.querySelector(".btn_reset").style.display = "none";
+  document.querySelector(".btn_set").style.display = "block";
 };
