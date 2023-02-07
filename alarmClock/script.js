@@ -16,6 +16,7 @@ const checkAlarm = () => {
     let stop = document.querySelector(".btn_set");
     stop.style.display = "none";
     document.querySelector(".btn_reset").style.display = "block";
+    document.querySelector(".clockImg").src = "./img/icons8-alarm-clock_2.gif";
   }
 };
 
@@ -36,4 +37,5 @@ const reset = () => {
 
   document.querySelector(".btn_reset").style.display = "none";
   document.querySelector(".btn_set").style.display = "block";
+  document.querySelector(".clockImg").src = "./img/icons8-alarm-clock.gif";
 };
