@@ -1,0 +1,23 @@
+<!-- ngIf -->
+<div *ngIf="displayName; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <h1>then</h1>
+</ng-template>
+<ng-template #elseBlock>
+  <h1>else</h1>
+</ng-template>
+
+<!-- ngSwitch -->
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">red</div>
+  <div *ngSwitchCase="'green'">green</div>
+  <div *ngSwitchDefault>pick again</div>
+</div>
+
+<!-- ngFor -->
+<div *ngFor="let color of colors; index as i; first as f; last as l">
+  <h2>
+    index : {{ i + 1 }} || first : {{ f }} || last : {{ l }} || color : {{ color }}
+  </h2>
+</div>

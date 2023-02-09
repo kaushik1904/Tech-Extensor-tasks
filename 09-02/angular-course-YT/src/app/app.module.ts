@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { InterpolationComponent } from './interpolation/interpolation.component';
 import { BindingComponent } from './binding/binding.component';
+import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 
 @NgModule({
-  declarations: [AppComponent, InterpolationComponent, BindingComponent],
+  declarations: [AppComponent, InterpolationComponent, BindingComponent, StructuralDirectivesComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
