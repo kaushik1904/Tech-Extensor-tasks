@@ -6,3 +6,10 @@
 
 <!-- structural directives -->
 <app-structural-directives></app-structural-directives>
+
+<!-- Component Interaction -->
+{{ msg }}
+<app-component-interaction
+(childEvent)="msg=$event"
+[parentData]="name"
+></app-component-interaction>
