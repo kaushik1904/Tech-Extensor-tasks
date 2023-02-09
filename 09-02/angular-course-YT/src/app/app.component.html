@@ -3,3 +3,29 @@
 <p>{{ name.toUpperCase() }}</p>
 <p>{{ name.length }}</p>
 <p>Function => {{ getName() }}</p>
+
+<!-- binding -->
+<!-- 1.property binding -->
+<input type="text" [id]="getName()" />
+<input type="text" bind-id="name" />
+
+<!-- 2.class binding -->
+<p class="text-success">{{ name }}</p>
+<p [class]="successClass">{{ name }}</p>
+<p [class.text-danger]="hasError">{{ name }}</p>
+
+<!-- 3.style binding -->
+<p [style.color]="hasError ? 'green' : 'red'">style binding</p>
+<p [ngStyle]="multipleStyle">Multitple style using js object</p>
+
+<!-- 4.event binding -->
+<button (click)="onButtonClick($event)">click</button>
+{{ greeting }}
+
+<!-- Template Reference Variables -->
+<input type="text" #myId>
+<button (click)="logMsg(myId.value)">Log</button>
+
+<!-- Two way binding -->
+<input type="text" [(ngModel)]="value">
+{{value}}
