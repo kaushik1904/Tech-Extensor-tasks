@@ -7,11 +7,25 @@ import { BindingComponent } from './binding/binding.component';
 import { StructuralDirectivesComponent } from './structural-directives/structural-directives.component';
 import { ComponentInteractionComponent } from './component-interaction/component-interaction.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ServicesComponent } from './services/services.component';
+import { EmpListComponent } from './services/emp-list/emp-list.component';
+import { EmpDetailComponent } from './services/emp-detail/emp-detail.component';
+import { EmployeeService } from './employee.service';
 
 @NgModule({
-  declarations: [AppComponent, InterpolationComponent, BindingComponent, StructuralDirectivesComponent, ComponentInteractionComponent, PipesComponent],
+  declarations: [
+    AppComponent,
+    InterpolationComponent,
+    BindingComponent,
+    StructuralDirectivesComponent,
+    ComponentInteractionComponent,
+    PipesComponent,
+    ServicesComponent,
+    EmpListComponent,
+    EmpDetailComponent,
+  ],
   imports: [BrowserModule, FormsModule],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
