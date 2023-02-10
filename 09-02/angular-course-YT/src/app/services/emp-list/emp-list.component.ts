@@ -7,11 +7,13 @@ import { EmployeeService } from 'src/app/employee.service';
   styleUrls: ['./emp-list.component.css'],
 })
 export class EmpListComponent {
-  public employees:any[] = [];
+  public employees: any[] = [];
 
   constructor(private _employeeService: EmployeeService) {}
 
   ngOnInit() {
-    this.employees = this._employeeService.getEmployees();
+    this._employeeService
+      .getEmployees()
+      .subscribe((data) => (this.employees = data));
   }
 }
