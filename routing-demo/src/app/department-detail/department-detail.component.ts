@@ -33,4 +33,12 @@ export class DepartmentDetailComponent {
     let selectedId = this.departmentId ? this.departmentId : null;
     this.router.navigate(['/departments', { id: selectedId }]);
   }
+
+  showContact() {
+    this.router.navigate(['contact'], { relativeTo: this.route });
+  }
+
+  showOverview() {
+    this.router.navigate(['overview'], { relativeTo: this.route });
+  }
 }
