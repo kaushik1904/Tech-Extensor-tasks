@@ -1,5 +1,7 @@
 <p>department-list</p>
 
 <ul *ngFor="let i of departments">
-  <li (click)="onSelect(i)">{{ i.id }} : {{ i.name }}</li>
+  <li (click)="onSelect(i)" [class.selected]="isSelected(i)">
+    {{ i.id }} : {{ i.name }}
+  </li>
 </ul>

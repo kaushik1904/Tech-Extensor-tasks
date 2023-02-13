@@ -28,4 +28,9 @@ export class DepartmentDetailComponent {
     let nextId = this.departmentId + 1;
     this.router.navigate(['/departments', nextId]);
   }
+
+  goBack() {
+    let selectedId = this.departmentId ? this.departmentId : null;
+    this.router.navigate(['/departments', { id: selectedId }]);
+  }
 }
