@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EnrollmentService } from './enrollment.service';
 import { User } from './user';
 
 @Component({
@@ -9,6 +10,9 @@ import { User } from './user';
 export class AppComponent {
   title = 'tdf';
   topics = ['Angular js', 'Vue js', 'React js'];
+  submitted = false;
+
+  constructor(private _enrollmentService: EnrollmentService) {}
 
   userModel = new User(
     'kaushik',
@@ -18,4 +22,12 @@ export class AppComponent {
     'Morning',
     false
   );
+  onSubmit() {
+    this.submitted = true;
+    // console.log(this.userModel);
+    this._enrollmentService.enroll(this.userModel).subscribe(
+      (data) => console.log('success'),
+      (err) => console.log('Error:' + err)
+    );
+  }
 }
