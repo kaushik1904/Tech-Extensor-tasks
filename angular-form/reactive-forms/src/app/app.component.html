@@ -19,6 +19,9 @@
         <small *ngIf="userName.errors?.['minlength']" class="text-danger"
           >Username must be atleast 3 characters</small
         >
+        <small *ngIf="userName.errors?.['forbiddenName']" class="text-danger"
+          >{{ userName.value }} username not allowed</small
+        >
       </div>
     </div>
     <div class="form-group">
