@@ -19,4 +19,18 @@ export class AppComponent {
       postalCode: new FormControl(''),
     }),
   });
+
+  loadApiData() {
+    this.registrationForm.patchValue({
+      // setValue
+      userName: 'Kaushik',
+      password: '123',
+      confirmPassword: '123',
+      // address: {
+      //   city: 'palanpur',
+      //   state: 'gujarat',
+      //   postalCode: '385001',
+      // },
+    });
+  }
 }
