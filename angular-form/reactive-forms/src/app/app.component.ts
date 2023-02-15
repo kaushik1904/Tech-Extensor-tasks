@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -9,16 +9,29 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class AppComponent {
   title = 'reactive-forms';
 
-  registrationForm = new FormGroup({
-    userName: new FormControl('kaushik'),
-    password: new FormControl(''),
-    confirmPassword: new FormControl(''),
-    address: new FormGroup({
-      city: new FormControl(''),
-      state: new FormControl(''),
-      postalCode: new FormControl(''),
+  constructor(private fb: FormBuilder) {}
+
+  registrationForm = this.fb.group({
+    userName: ['Kaushik'],
+    password: [''],
+    confirmPassword: [''],
+    address: this.fb.group({
+      city: [''],
+      state: [''],
+      postalCode: [''],
     }),
   });
+
+  // registrationForm = new FormGroup({
+  //   userName: new FormControl('kaushik'),
+  //   password: new FormControl(''),
+  //   confirmPassword: new FormControl(''),
+  //   address: new FormGroup({
+  //     city: new FormControl(''),
+  //     state: new FormControl(''),
+  //     postalCode: new FormControl(''),
+  //   }),
+  // });
 
   loadApiData() {
     this.registrationForm.patchValue({
