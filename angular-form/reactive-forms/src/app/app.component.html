@@ -34,7 +34,11 @@
         formControlName="confirmPassword"
         type="password"
         class="form-control"
+        [class.is-invalid]="registrationForm.errors?.['misMatch']"
       />
+      <small *ngIf="registrationForm.errors?.['misMatch']" class="text-danger"
+        >{{ userName.value }} Password do not matched</small
+      >
     </div>
 
     <div formGroupName="address">
