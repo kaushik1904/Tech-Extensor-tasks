@@ -1,6 +1,16 @@
 {
   "restaurants": [
-    { "id": 1, "name": "KFC", "address": "Ahmedabad" },
-    { "id": 2, "name": "Burger King", "address": "Ahmedabad" }
+    {
+      "id": 1,
+      "name": "KFC",
+      "email": "kfc@gmail.com",
+      "address": "Ahmedabad"
+    },
+    {
+      "id": 2,
+      "name": "Burger King",
+      "email": "burgerking@gmail.com",
+      "address": "Ahmedabad"
+    }
   ]
 }

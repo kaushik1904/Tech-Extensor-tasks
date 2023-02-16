@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class RestoService {
+  _url = ' http://localhost:3000/restaurants';
 
-  constructor() { }
+  constructor(private http: HttpClient) {}
+
+  getLists() {
+    return this.http.get(this._url);
+  }
 }
