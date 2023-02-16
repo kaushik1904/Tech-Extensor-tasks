@@ -12,4 +12,9 @@ export class RestoService {
   getLists() {
     return this.http.get(this._url);
   }
+
+  saveResto(data: any) {
+    // console.log(data);
+    return this.http.post(this._url, data);
+  }
 }

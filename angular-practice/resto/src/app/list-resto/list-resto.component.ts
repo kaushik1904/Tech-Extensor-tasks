@@ -8,7 +8,7 @@ import { RestoService } from '../resto.service';
 })
 export class ListRestoComponent {
   constructor(private resto: RestoService) {}
-  public collection:any = [];
+  public collection: any = [];
 
   ngOnInit(): void {
     this.resto.getLists().subscribe(

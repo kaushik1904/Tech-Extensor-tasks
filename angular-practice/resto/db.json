@@ -11,6 +11,18 @@
       "name": "Burger King",
       "email": "burgerking@gmail.com",
       "address": "Ahmedabad"
+    },
+    {
+      "name": "subway",
+      "email": "subway@gmail.com",
+      "address": "surat",
+      "id": 3
+    },
+    {
+      "name": "Royal Restaurant",
+      "email": "royal@gmail.com",
+      "address": "Gandhingar",
+      "id": 4
     }
   ]
 }
