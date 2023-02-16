@@ -1,0 +1,6 @@
+{
+  "restaurants": [
+    { "id": 1, "name": "KFC", "address": "Ahmedabad" },
+    { "id": 2, "name": "Burger King", "address": "Ahmedabad" }
+  ]
+}
