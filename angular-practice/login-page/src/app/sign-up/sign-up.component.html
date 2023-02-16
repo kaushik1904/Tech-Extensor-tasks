@@ -1,13 +1,40 @@
 <app-navbar></app-navbar>
 <div class="container-fluid">
-  <form>
+  <form [formGroup]="signupForm">
+    {{ signupForm.value | json }}
     <div class="form-group">
       <label for="">Username : </label>
-      <input formControlName="userName" type="text" class="form-control" />
+      <input
+        formControlName="userName"
+        type="text"
+        class="form-control"
+        [class.is-invalid]="userName.touched && userName.invalid"
+      />
+      <div *ngIf="userName.touched && userName.invalid">
+        <small *ngIf="userName.errors?.['required']" class="text-danger"
+          >Please Enter Username</small
+        >
+        <small *ngIf="userName.errors?.['minlength']" class="text-danger"
+          >Username must be atleast 3 characters</small
+        >
+      </div>
     </div>
     <div class="form-group">
       <label for="">Password : </label>
-      <input formControlName="password" type="password" class="form-control" />
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        [class.is-invalid]="password.touched && password.invalid"
+      />
+      <div *ngIf="password.touched && password.invalid">
+        <small *ngIf="password.errors?.['required']" class="text-danger"
+          >Please Enter Password</small
+        >
+        <small *ngIf="password.errors?.['minlength']" class="text-danger"
+          >Password must be atleast 6 characters</small
+        >
+      </div>
     </div>
     <div class="form-group">
       <label for="">Confirm Password : </label>
@@ -15,10 +42,23 @@
         formControlName="confirmPassword"
         type="password"
         class="form-control"
+        [class.is-invalid]="signupForm.errors?.['misMatch']"
       />
+      <div *ngIf="signupForm.errors?.['misMatch']">
+        <small *ngIf="signupForm.errors?.['misMatch']" class="text-danger"
+          >Password do not match</small
+        >
+      </div>
     </div>
     <div class="mt-3">
-      <button class="btn btn-primary" type="submit">Register</button>
+      <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="signupForm.invalid"
+        (click)="goSignIn()"
+      >
+        Register
+      </button>
     </div>
   </form>
 </div>
