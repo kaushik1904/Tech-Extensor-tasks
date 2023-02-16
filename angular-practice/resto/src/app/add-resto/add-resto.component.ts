@@ -18,5 +18,12 @@ export class AddRestoComponent {
   collectResto() {
     console.log(this.restoGroup.value);
     this.resto.saveResto(this.restoGroup.value).subscribe();
+    this.successMsg = true;
+    this.restoGroup.reset({});
+  }
+
+  successMsg = false;
+  closeAlert() {
+    this.successMsg = false;
   }
 }

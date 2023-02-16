@@ -1,5 +1,19 @@
 <div class="container mt-5">
   <h1>Add Resto</h1>
+  <div
+    *ngIf="successMsg"
+    class="alert alert-success alert-dismissible fade show"
+    role="alert"
+  >
+    <strong>Success!</strong> Your Restaurant details added.
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+      (click)="closeAlert()"
+    ></button>
+  </div>
   <form [formGroup]="restoGroup" (ngSubmit)="collectResto()">
     <div class="form-group">
       <label>Name : </label>

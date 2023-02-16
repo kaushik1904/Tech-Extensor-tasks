@@ -23,6 +23,18 @@
       "email": "royal@gmail.com",
       "address": "Gandhingar",
       "id": 4
+    },
+    {
+      "name": "kabir",
+      "email": "kabir@gmail.com",
+      "address": "thaltej ahmedabad",
+      "id": 5
+    },
+    {
+      "name": "taj",
+      "email": "taj@gmail.com",
+      "address": "mumbai",
+      "id": 6
     }
   ]
 }
