@@ -17,4 +17,8 @@ export class RestoService {
     // console.log(data);
     return this.http.post(this._url, data);
   }
+
+  removeResto(id: any) {
+    return this.http.delete(`${this._url}/${id}`);
+  }
 }

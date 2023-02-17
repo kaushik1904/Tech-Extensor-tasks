@@ -16,4 +16,9 @@ export class ListRestoComponent {
       (err) => console.log(err)
     );
   }
+
+  deleteResto(id: any) {
+    this.collection.splice(id - 1, 1);
+    this.resto.removeResto(id).subscribe((res) => console.log(res));
+  }
 }
