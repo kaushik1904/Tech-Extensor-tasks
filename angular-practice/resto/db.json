@@ -1,3 +1,22 @@
 {
-  "restaurants": []
+  "restaurants": [
+    {
+      "name": "kabir",
+      "email": "kabir@gmail.com",
+      "address": "ahmedabad",
+      "id": 1
+    },
+    {
+      "name": "kfc",
+      "email": "kfc@gmail.com",
+      "address": "palanpur",
+      "id": 2
+    },
+    {
+      "name": "burgerking",
+      "email": "burgerking@gmail.com",
+      "address": "ahmedabad",
+      "id": 3
+    }
+  ]
 }

@@ -9,7 +9,7 @@ import { UpdateRestoComponent } from './update-resto/update-resto.component';
 const routes: Routes = [
   { path: 'add-resto', component: AddRestoComponent },
   { path: 'list-resto', component: ListRestoComponent },
-  { path: 'update-resto', component: UpdateRestoComponent },
+  { path: 'update-resto/:id', component: UpdateRestoComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
 ];
