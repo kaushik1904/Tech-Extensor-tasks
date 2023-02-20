@@ -1,0 +1,5 @@
+<ul *ngFor="let i of data">
+  <li>
+    <a routerLink="/welcome/{{ i['id'] }}">{{ i.id }} {{ i.name }}</a>
+  </li>
+</ul>
