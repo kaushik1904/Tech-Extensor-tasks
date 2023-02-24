@@ -9,17 +9,16 @@ import { AuthService } from './shared/auth.service';
 })
 export class AppComponent implements DoCheck {
   title = 'auth';
-  constructor(private router: Router, private service: AuthService) {}
+  constructor(private router: Router, private service: AuthService) {
+    this.service.getUser(sessionStorage.getItem('id')).subscribe((res) => {
+      this.userName = res.name;
+    });
+  }
 
   userName: any;
 
   isMenuRequried = false;
 
-  ngOnInit() {
-    this.service.getUser(sessionStorage.getItem('id')).subscribe((res) => {
-      this.userName = res.name;
-    });
-  }
 
   ngDoCheck(): void {
     let currentUrl = this.router.url;
