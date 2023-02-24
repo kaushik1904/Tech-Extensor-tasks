@@ -37,7 +37,7 @@ export class LoginComponent {
         });
 
         if (user) {
-          if (user.isActive) {
+          if (user.isActive == 'active') {
             this.toastr.success('Login Successfully');
             sessionStorage.setItem('id', user.id);
             sessionStorage.setItem('userRole', user.role);

@@ -11,7 +11,6 @@ import { RegisterComponent } from './common/components/register/register.compone
 import { LoginComponent } from './common/components/login/login.component';
 import { HomeComponent } from './common/components/home/home.component';
 import { UserlistingComponent } from './common/components/userlisting/userlisting.component';
-import { UpdatepopupComponent } from './common/components/updatepopup/updatepopup.component';
 import { MaterialModule } from 'src/material.module';
 
 @NgModule({
@@ -20,8 +19,7 @@ import { MaterialModule } from 'src/material.module';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    UserlistingComponent,
-    UpdatepopupComponent,
+    UserlistingComponent
   ],
   imports: [
     BrowserModule,
