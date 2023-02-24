@@ -13,12 +13,16 @@ export class AuthService {
     return this.http.get<any>(this._url);
   }
 
-  // getUser(id: any) {
-  //   return this.http.get<any>(this._url + '/' + id);
-  // }
+  getUser(id: any) {
+    return this.http.get<any>(this._url + '/' + id);
+  }
 
   addUser(data: any) {
     return this.http.post(this._url, data);
+  }
+
+  updateUserData(id: any,data:any) {
+    return this.http.put(this._url + '/' + id,data);
   }
 
   isLoggedIn() {
