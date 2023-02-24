@@ -17,9 +17,9 @@
         {{ user.isActive }}
       </td>
       <td *ngIf="isAdmin">
-        <button class="btn btn-success" routerLink="/update/{{user.id}}">
+        <button class="btn btn-success" routerLink="/update/{{ user.id }}">
           Edit</button
-        >&#160;&#160;<button class="btn btn-danger">Delete</button>
+        >&#160;&#160;<button (click)="deleteUser(user.id)" class="btn btn-danger">Delete</button>
       </td>
     </tr>
   </tbody>

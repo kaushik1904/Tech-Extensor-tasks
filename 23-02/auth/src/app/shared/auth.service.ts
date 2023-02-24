@@ -21,8 +21,12 @@ export class AuthService {
     return this.http.post(this._url, data);
   }
 
-  updateUserData(id: any,data:any) {
-    return this.http.put(this._url + '/' + id,data);
+  deleteUser(id: any) {
+    return this.http.delete(this._url + '/' + id);
+  }
+
+  updateUserData(id: any, data: any) {
+    return this.http.put(this._url + '/' + id, data);
   }
 
   isLoggedIn() {

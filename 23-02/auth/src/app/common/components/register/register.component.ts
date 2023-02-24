@@ -57,23 +57,31 @@ export class RegisterComponent {
   onSubmit() {
     if (!this.isAdmin) {
       if (this.registerForm.valid) {
-        this.toastr.success('Registered Successfully');
+        this.toastr.success('Registered Successfully', undefined, {
+          timeOut: 1000,
+        });
         this.service.addUser(this.registerForm.value).subscribe();
         this.router.navigate(['login']);
       } else {
-        this.toastr.warning('Please Enter valid data');
+        this.toastr.warning('Please Enter valid data', undefined, {
+          timeOut: 1000,
+        });
       }
     } else {
       if (this.registerForm.valid) {
-        this.toastr.success('Updated Successfully');
+        this.toastr.success('Updated Successfully', undefined, {
+          timeOut: 1000,
+        });
         this.service
           .updateUserData(this.id, this.registerForm.value)
           .subscribe();
         this.router.navigate(['user']);
-        console.log(this.registerForm.value.role);
+        // console.log(this.registerForm.value.role);
         // sessionStorage.setItem('userRole', this.registerForm.value.role || '');
       } else {
-        this.toastr.warning('Please Enter valid data');
+        this.toastr.warning('Please Enter valid data', undefined, {
+          timeOut: 1000,
+        });
       }
     }
   }

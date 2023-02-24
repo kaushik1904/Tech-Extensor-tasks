@@ -38,19 +38,23 @@ export class LoginComponent {
 
         if (user) {
           if (user.isActive == 'active') {
-            this.toastr.success('Login Successfully');
+            this.toastr.success('Login Successfully', undefined, {
+              timeOut: 1000,
+            });
             sessionStorage.setItem('id', user.id);
             sessionStorage.setItem('userRole', user.role);
             this.router.navigate(['']);
           } else {
-            this.toastr.error('Please Contact Admin', 'In Active User');
+            this.toastr.error('Please Contact Admin', 'In Active User', {
+              timeOut: 1000,
+            });
           }
         } else {
-          this.toastr.error('Invalid Data');
+          this.toastr.error('Invalid Data', undefined, { timeOut: 1000 });
         }
       });
     } else {
-      this.toastr.warning('Please Enter valid data');
+      this.toastr.warning('Please Enter valid data', undefined, { timeOut: 1000 });
     }
   }
 }
