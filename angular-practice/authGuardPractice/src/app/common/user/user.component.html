@@ -1,0 +1,28 @@
+<table class="table table-striped">
+  <tbody>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Role</th>
+      <th *ngIf="isAdmin">Opertion</th>
+      <th>Hobby</th>
+    </tr>
+    <tr *ngFor="let user of userData">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name | titlecase }}</td>
+      <td>{{ user.gender }}</td>
+      <td>{{ user.role | titlecase }}</td>
+      <td *ngIf="isAdmin">
+        <button class="btn btn-success" routerLink="/update/{{ user.id }}">
+          Edit</button
+        >&#160;&#160;<button class="btn btn-danger">Delete</button>
+      </td>
+      <td>
+        {{ user.hobby.cricket ? "Cricket" : "" }} &nbsp;
+        {{ user.hobby.reading ? "Reading" : "" }} &nbsp;
+        {{ user.hobby.dancing ? "Dancing" : "" }} &nbsp;
+      </td>
+    </tr>
+  </tbody>
+</table>
