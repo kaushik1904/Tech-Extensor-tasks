@@ -46,7 +46,7 @@ export class RegisterComponent {
     email: ['', Validators.required],
     password: ['', Validators.required],
     gender: [''],
-    role: [''],
+    role: ['user'],
     hobby: this.fb.group({
       cricket: [''],
       reading: [''],
