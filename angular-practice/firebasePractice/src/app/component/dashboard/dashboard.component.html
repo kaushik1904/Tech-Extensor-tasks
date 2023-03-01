@@ -1,0 +1,119 @@
+<div
+  class="mx-auto my-5 col-10 col-md-8 col-lg-6 shadow-lg p-3 mb-5 bg-white rounded"
+>
+  <h1 class="text-center">User Data</h1>
+  <br />
+  <form
+    action=""
+    [formGroup]="registrationForm"
+    (ngSubmit)="onSubmit()"
+    novalidate
+  >
+    <!-- name -->
+    <div class="form-group">
+      <label for="">Name : </label>
+      <input
+        type="text"
+        formControlName="name"
+        class="form-control"
+        [class.is-invalid]="name.invalid && name.touched"
+      />
+      <small [class.d-none]="name.valid || name.untouched" class="text-danger"
+        >Name is Required</small
+      >
+    </div>
+
+    <!-- email -->
+    <div class="form-group">
+      <label for="">Email : </label>
+      <input
+        type="text"
+        formControlName="email"
+        class="form-control"
+        [class.is-invalid]="email.invalid && email.touched"
+      />
+      <small [class.d-none]="email.valid || email.untouched" class="text-danger"
+        >Email is Required</small
+      >
+    </div>
+
+    <!-- password -->
+    <div class="form-group">
+      <label for="">Password : </label>
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        [class.is-invalid]="password.invalid && password.touched"
+      />
+      <small
+        [class.d-none]="password.valid || password.untouched"
+        class="text-danger"
+        >Password is Required</small
+      >
+    </div>
+
+    <!-- gender -->
+    <div class="radio-inline">
+      <label for="">Gender : </label>
+      <input type="radio" name="gender" value="Male" formControlName="gender" />
+      <label class="radio-label"> Male</label>
+      <input
+        type="radio"
+        name="gender"
+        value="Female"
+        formControlName="gender"
+      />
+      <label class="radio-label">Female</label>
+    </div>
+
+    <!-- admin -->
+    <div class="radio-inline" *ngIf="isAdmin">
+      <label for="">Role : </label>
+      <input type="radio" name="role" value="Admin" formControlName="role" />
+      <label class="radio-label"> Admin</label>
+      <input type="radio" name="role" value="User" formControlName="role" />
+      <label class="radio-label">User</label>
+    </div>
+
+    <!-- hobby -->
+    <div formGroupName="hobby">
+      <label for="">Hobby : </label>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          formControlName="cricket"
+          value="cricket"
+        />
+        <label class="form-check-label">Cricket</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          formControlName="reading"
+          value="reading"
+        />
+        <label class="form-check-label">Reading</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          formControlName="dancing"
+          value="dancing"
+        />
+        <label class="form-check-label">Dancing</label>
+      </div>
+    </div>
+    <div class="mt-3">
+      <button
+        class="btn btn-success"
+        [disabled]="this.registrationForm.invalid"
+      >
+        Add Data
+      </button>
+    </div>
+  </form>
+</div>

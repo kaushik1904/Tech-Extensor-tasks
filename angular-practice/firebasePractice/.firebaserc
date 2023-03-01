@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "authpractice-79ff6": {
+      "hosting": {
+        "firebasePractice": [
+          "authpractice-79ff6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "authpractice-79ff6"
+  }
+}
