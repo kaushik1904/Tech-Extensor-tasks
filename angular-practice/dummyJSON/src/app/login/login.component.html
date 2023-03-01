@@ -1,0 +1,49 @@
+<div
+  class="mx-auto my-5 col-10 col-md-8 col-lg-6 shadow-lg p-3 mb-5 bg-white rounded"
+>
+  <h1 class="text-center">Login</h1>
+  <br />
+  <form
+    class="form-example"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()"
+    novalidate
+  >
+    <!-- email -->
+    <div class="form-group">
+      <label for="">Name : </label>
+      <input
+        type="text"
+        formControlName="name"
+        class="form-control"
+        [class.is-invalid]="name.invalid && name.touched"
+      />
+      <small [class.d-none]="name.valid || name.untouched" class="text-danger"
+        >Name is Required</small
+      >
+    </div>
+
+    <!-- password -->
+    <div class="form-group">
+      <label for="">Password : </label>
+      <input
+        type="password"
+        formControlName="password"
+        class="form-control"
+        [class.is-invalid]="password.invalid && password.touched"
+      />
+      <small
+        [class.d-none]="password.valid || password.untouched"
+        class="text-danger"
+        >Password is Required</small
+      >
+    </div>
+
+    <div class="mt-3">
+      <button class="btn btn-info" [disabled]="this.loginForm.invalid">
+        Login</button
+      >&nbsp;
+      <button class="btn btn-success" routerLink="/register">Register</button>
+    </div>
+  </form>
+</div>
