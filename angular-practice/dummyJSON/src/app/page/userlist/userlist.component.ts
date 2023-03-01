@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserService } from '../service/user.service';
+import { UserService } from '../../shared/service/user.service';
 
 @Component({
   selector: 'app-userlist',
@@ -10,11 +10,10 @@ export class UserlistComponent {
   constructor(private service: UserService) {
     this.service.getAllUser().subscribe(
       (res) => {
-        console.log(res);
-        this.usersData = res;
+        this.userData = res.users;
       },
       (err) => console.log(err.error.message)
     );
   }
-  usersData: any;
+  userData: any;
 }

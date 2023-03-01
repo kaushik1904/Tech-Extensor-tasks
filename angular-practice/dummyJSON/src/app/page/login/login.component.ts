@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../service/auth.service';
+import { AuthService } from '../../shared/service/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -34,7 +34,8 @@ export class LoginComponent {
       (data) => {
         console.log(data);
         sessionStorage.setItem('token', data.token);
-        this.router.navigate(['/userlist']);
+        sessionStorage.setItem('id', data.id);
+        this.router.navigate(['/profile']);
       },
       (err) => {
         console.log(err.error.message);
