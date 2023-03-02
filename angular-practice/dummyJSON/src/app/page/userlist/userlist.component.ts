@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from 'src/app/model/user.model';
 import { UserService } from '../../shared/service/user.service';
 
 @Component({
@@ -15,5 +16,6 @@ export class UserlistComponent {
       (err) => console.log(err.error.message)
     );
   }
-  userData: any;
+  userData: User[] = [];
+  public data: User[] = [];
 }
