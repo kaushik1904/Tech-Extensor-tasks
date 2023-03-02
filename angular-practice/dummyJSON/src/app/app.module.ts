@@ -11,6 +11,9 @@ import { UserlistComponent } from './page/userlist/userlist.component';
 import { ProfileComponent } from './page/profile/profile.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { ProfileCardComponent } from './component/profile-card/profile-card.component';
+import { ProductsComponent } from './page/products/products.component';
+import { ProductCardComponent } from './component/product-card/product-card.component';
+import { CartComponent } from './page/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { ProfileCardComponent } from './component/profile-card/profile-card.comp
     ProfileComponent,
     NavbarComponent,
     ProfileCardComponent,
+    ProductsComponent,
+    ProductCardComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

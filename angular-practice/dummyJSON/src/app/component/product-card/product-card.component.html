@@ -1,0 +1,23 @@
+<div class="col">
+  <div class="card">
+    <img
+      src="{{ product?.thumbnail }}"
+      class="card-img-top"
+      alt="Hollywood Sign on The Hill"
+      style="height: 280px"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ product?.title }}</h5>
+      <p class="card-text">Price {{ product?.price }}</p>
+      <p class="card-text">Discount Price {{ product?.discountPercentage }}</p>
+      <p class="card-text">Rating {{ product?.rating }}</p>
+      <p class="card-text">
+        {{ product?.description }}
+      </p>
+
+      <button class="btn btn-warning" routerLink="/cart/{{ product?.id }}">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
