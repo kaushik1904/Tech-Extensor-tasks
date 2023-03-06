@@ -13,8 +13,8 @@ export class SearchComponent {
 
   searchData: User[] = [];
 
-  @Output()
-  public userData = new EventEmitter();
+  // @Output()
+  // public userData = new EventEmitter();
 
   searchForm = this.fb.group({
     name: [''],
@@ -26,12 +26,14 @@ export class SearchComponent {
       .searchUser(this.searchForm.value.name || '')
       .subscribe((res) => {
         this.searchData = res;
-        this.userData.emit(this.searchData);
+        // this.userService.userSearchData.subscribe()
+        // this.userData.emit(this.searchData);
       });
   }
 
   clear() {
     this.searchForm.reset();
-    this.userData.emit([]);
+    // this.userData.emit([]);
+    this.userService.userSearchData.next([]);
   }
 }

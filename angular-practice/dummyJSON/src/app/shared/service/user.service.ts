@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs';
+import { BehaviorSubject, map } from 'rxjs';
 import { User } from 'src/app/model/user.model';
 
 @Injectable({
@@ -10,6 +10,9 @@ export class UserService {
   constructor(private http: HttpClient) {}
 
   _url = 'https://dummyjson.com/auth/users';
+
+  userSearchData = new BehaviorSubject<User[]>([]);
+  userProfile = new BehaviorSubject<User|null>(null);
 
   getAllUser() {
     return this.http.get<any>(this._url);
@@ -22,6 +25,11 @@ export class UserService {
   searchUser(name: string) {
     return this.http
       .get<{ users: User[] }>(`${this._url}/search?q=${name}`)
-      .pipe(map((res) => res.users));
+      .pipe(
+        map((res) => {
+          this.userSearchData.next(res.users);
+          return res.users;
+        })
+      );
   }
 }

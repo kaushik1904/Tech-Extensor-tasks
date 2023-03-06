@@ -13,6 +13,11 @@ export class ProfileComponent {
     this.userService.getUserData(this.userId).subscribe(
       (res) => {
         this.userData = res;
+        console.log(res);
+        this.userService.userProfile.next(res);
+        // this.userService.userProfile.subscribe((res) => {
+        //   console.log(res);
+        // });
       },
       (err) => {
         console.log(err.message);

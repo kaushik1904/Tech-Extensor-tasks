@@ -15,7 +15,10 @@ export class UserlistComponent {
       },
       (err) => console.log(err.error.message)
     );
+    this.service.userSearchData.subscribe((res) => {
+      this.data = res;
+    });
   }
   userData: User[] = [];
-  public data: User[] = [];
+  data: User[] = [];
 }
