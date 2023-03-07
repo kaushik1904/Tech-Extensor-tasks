@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 export class ServiceService {
   constructor() {}
 
-  print(value: string) {
+  print(value: string, container: string) {
     let li = document.createElement('li');
     li.innerText = value;
-    document.getElementById('ulContainer')?.appendChild(li);
+    document.getElementById(container)?.appendChild(li);
   }
 }

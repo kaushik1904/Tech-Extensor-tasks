@@ -17,7 +17,7 @@ export class IntervalComponent {
 
     this.videoSubscription = broadCastingVideos.subscribe((res) => {
       let value = 'Video ' + ++res;
-      this.service.print(value);
+      this.service.print(value, 'ulContainer');
       if (res >= 5) {
         this.videoSubscription?.unsubscribe();
       }

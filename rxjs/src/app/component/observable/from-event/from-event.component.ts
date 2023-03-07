@@ -15,7 +15,7 @@ export class FromEventComponent {
     let count = 1;
     fromEvent(this.addBtn.nativeElement, 'click').subscribe((res) => {
       let value = 'Video ' + count++;
-      this.service.print(value);
+      this.service.print(value, 'ulContainer');
     });
   }
 }
