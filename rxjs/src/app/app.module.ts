@@ -14,6 +14,7 @@ import { ToArrayComponent } from './component/observable/to-array/to-array.compo
 import { MapComponent } from './component/observable/map/map.component';
 import { FilterComponent } from './component/observable/filter/filter.component';
 import { TapComponent } from './component/observable/tap/tap.component';
+import { TakeComponent } from './component/observable/take/take.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TapComponent } from './component/observable/tap/tap.component';
     ToArrayComponent,
     MapComponent,
     FilterComponent,
-    TapComponent
+    TapComponent,
+    TakeComponent
   ],
   imports: [
     BrowserModule,
