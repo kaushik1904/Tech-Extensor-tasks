@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DebounceTimeComponent } from './component/observable/debounce-time/debounce-time.component';
 import { FilterComponent } from './component/observable/filter/filter.component';
 import { FromEventComponent } from './component/observable/from-event/from-event.component';
 import { IntervalComponent } from './component/observable/interval/interval.component';
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: 'tap', component: TapComponent },
       { path: 'take', component: TakeComponent },
       { path: 'retry', component: RetryComponent },
+      { path: 'debounceTime', component: DebounceTimeComponent },
     ],
   },
 ];

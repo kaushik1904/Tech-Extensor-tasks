@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { delay, pipe, retry, retryWhen, scan } from 'rxjs';
-import { User } from './User.component';
+import { User } from '../model/User.component';
 
 @Component({
   selector: 'app-retry',
