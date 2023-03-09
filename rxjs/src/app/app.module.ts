@@ -15,6 +15,8 @@ import { MapComponent } from './component/observable/map/map.component';
 import { FilterComponent } from './component/observable/filter/filter.component';
 import { TapComponent } from './component/observable/tap/tap.component';
 import { TakeComponent } from './component/observable/take/take.component';
+import { RetryComponent } from './component/observable/retry/retry.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,13 +32,11 @@ import { TakeComponent } from './component/observable/take/take.component';
     MapComponent,
     FilterComponent,
     TapComponent,
-    TakeComponent
+    TakeComponent,
+    RetryComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
