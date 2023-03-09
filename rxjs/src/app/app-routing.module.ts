@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FromEventComponent } from './component/observable/from-event/from-event.component';
 import { IntervalComponent } from './component/observable/interval/interval.component';
 import { ListComponent } from './component/observable/list/list.component';
+import { MapComponent } from './component/observable/map/map.component';
 import { ObservableComponent } from './component/observable/observable.component';
 import { OfFromComponent } from './component/observable/of-from/of-from.component';
 import { ToArrayComponent } from './component/observable/to-array/to-array.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
       { path: 'interval', component: IntervalComponent },
       { path: 'ofFrom', component: OfFromComponent },
       { path: 'toArray', component: ToArrayComponent },
+      { path: 'map', component: MapComponent },
     ],
   },
 ];

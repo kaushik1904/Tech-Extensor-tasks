@@ -11,6 +11,7 @@ import { FromEventComponent } from './component/observable/from-event/from-event
 import { IntervalComponent } from './component/observable/interval/interval.component';
 import { OfFromComponent } from './component/observable/of-from/of-from.component';
 import { ToArrayComponent } from './component/observable/to-array/to-array.component';
+import { MapComponent } from './component/observable/map/map.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ToArrayComponent } from './component/observable/to-array/to-array.compo
     FromEventComponent,
     IntervalComponent,
     OfFromComponent,
-    ToArrayComponent
+    ToArrayComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
