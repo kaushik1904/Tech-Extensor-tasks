@@ -1,6 +1,6 @@
 import { TitleCasePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { interval, Subscription, map, from } from 'rxjs';
+import { interval, Subscription, map, from, pluck } from 'rxjs';
 import { ServiceService } from 'src/app/service/service.service';
 
 @Component({
@@ -37,7 +37,10 @@ export class MapComponent {
     ];
 
     from(members)
-      .pipe(map((data) => data.name.toUpperCase()))
+      .pipe(
+        // map((data) => data.name.toUpperCase())
+        pluck('name')
+      )
       .subscribe((res) => {
         console.log(res);
         this.service.print(res, 'ulContainer2');
