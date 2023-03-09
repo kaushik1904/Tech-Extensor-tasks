@@ -7,6 +7,7 @@ import { ListComponent } from './component/observable/list/list.component';
 import { MapComponent } from './component/observable/map/map.component';
 import { ObservableComponent } from './component/observable/observable.component';
 import { OfFromComponent } from './component/observable/of-from/of-from.component';
+import { TapComponent } from './component/observable/tap/tap.component';
 import { ToArrayComponent } from './component/observable/to-array/to-array.component';
 import { PromiseComponent } from './component/promise/promise.component';
 
@@ -24,6 +25,7 @@ const routes: Routes = [
       { path: 'toArray', component: ToArrayComponent },
       { path: 'map', component: MapComponent },
       { path: 'filter', component: FilterComponent },
+      { path: 'tap', component: TapComponent },
     ],
   },
 ];

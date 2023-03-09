@@ -13,6 +13,7 @@ import { OfFromComponent } from './component/observable/of-from/of-from.componen
 import { ToArrayComponent } from './component/observable/to-array/to-array.component';
 import { MapComponent } from './component/observable/map/map.component';
 import { FilterComponent } from './component/observable/filter/filter.component';
+import { TapComponent } from './component/observable/tap/tap.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FilterComponent } from './component/observable/filter/filter.component'
     OfFromComponent,
     ToArrayComponent,
     MapComponent,
-    FilterComponent
+    FilterComponent,
+    TapComponent
   ],
   imports: [
     BrowserModule,
