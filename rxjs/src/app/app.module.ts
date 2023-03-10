@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DebounceTimeComponent } from './component/observable/debounce-time/debounce-time.component';
 import { ReplayComponent } from './component/observable/replay/replay.component';
 import { AsyncSubjectComponent } from './component/observable/async-subject/async-subject.component';
+import { ConcatComponent } from './component/observable/concat/concat.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AsyncSubjectComponent } from './component/observable/async-subject/asyn
     RetryComponent,
     DebounceTimeComponent,
     ReplayComponent,
-    AsyncSubjectComponent
+    AsyncSubjectComponent,
+    ConcatComponent
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
