@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AsyncSubjectComponent } from './component/observable/async-subject/async-subject.component';
 import { DebounceTimeComponent } from './component/observable/debounce-time/debounce-time.component';
 import { FilterComponent } from './component/observable/filter/filter.component';
 import { FromEventComponent } from './component/observable/from-event/from-event.component';
@@ -34,6 +35,7 @@ const routes: Routes = [
       { path: 'retry', component: RetryComponent },
       { path: 'debounceTime', component: DebounceTimeComponent },
       { path: 'replay', component: ReplayComponent },
+      { path: 'asyncSubject', component: AsyncSubjectComponent },
     ],
   },
 ];

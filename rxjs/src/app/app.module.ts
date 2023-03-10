@@ -19,6 +19,7 @@ import { RetryComponent } from './component/observable/retry/retry.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DebounceTimeComponent } from './component/observable/debounce-time/debounce-time.component';
 import { ReplayComponent } from './component/observable/replay/replay.component';
+import { AsyncSubjectComponent } from './component/observable/async-subject/async-subject.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ReplayComponent } from './component/observable/replay/replay.component'
     TakeComponent,
     RetryComponent,
     DebounceTimeComponent,
-    ReplayComponent
+    ReplayComponent,
+    AsyncSubjectComponent
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
