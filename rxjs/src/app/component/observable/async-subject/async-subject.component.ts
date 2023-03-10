@@ -9,7 +9,7 @@ import { ServiceService } from 'src/app/service/service.service';
 export class AsyncSubjectComponent {
   constructor(private service: ServiceService) {}
 
-  asyncVideoEmit: any;
+  asyncVideoEmit: string | undefined;
   ngOnInit() {
     this.service.asyncSubjectEmit.subscribe((res) => {
       this.asyncVideoEmit = res;

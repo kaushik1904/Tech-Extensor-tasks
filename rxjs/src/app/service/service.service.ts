@@ -8,7 +8,7 @@ export class ServiceService {
   constructor() {}
 
   videoEmit = new ReplaySubject<string>(1);
-  asyncSubjectEmit = new AsyncSubject();
+  asyncSubjectEmit = new AsyncSubject<string>();
 
   print(value: string, container: string) {
     let li = document.createElement('li');
