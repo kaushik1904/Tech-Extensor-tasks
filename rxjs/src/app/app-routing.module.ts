@@ -8,6 +8,7 @@ import { FromEventComponent } from './component/observable/from-event/from-event
 import { IntervalComponent } from './component/observable/interval/interval.component';
 import { ListComponent } from './component/observable/list/list.component';
 import { MapComponent } from './component/observable/map/map.component';
+import { MergeComponent } from './component/observable/merge/merge.component';
 import { ObservableComponent } from './component/observable/observable.component';
 import { OfFromComponent } from './component/observable/of-from/of-from.component';
 import { ReplayComponent } from './component/observable/replay/replay.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
       { path: 'replay', component: ReplayComponent },
       { path: 'asyncSubject', component: AsyncSubjectComponent },
       { path: 'concat', component: ConcatComponent },
+      { path: 'merge', component: MergeComponent },
     ],
   },
 ];

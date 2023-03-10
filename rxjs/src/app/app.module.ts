@@ -21,6 +21,7 @@ import { DebounceTimeComponent } from './component/observable/debounce-time/debo
 import { ReplayComponent } from './component/observable/replay/replay.component';
 import { AsyncSubjectComponent } from './component/observable/async-subject/async-subject.component';
 import { ConcatComponent } from './component/observable/concat/concat.component';
+import { MergeComponent } from './component/observable/merge/merge.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { ConcatComponent } from './component/observable/concat/concat.component'
     DebounceTimeComponent,
     ReplayComponent,
     AsyncSubjectComponent,
-    ConcatComponent
+    ConcatComponent,
+    MergeComponent
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
