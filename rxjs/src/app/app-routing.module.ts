@@ -8,6 +8,7 @@ import { ListComponent } from './component/observable/list/list.component';
 import { MapComponent } from './component/observable/map/map.component';
 import { ObservableComponent } from './component/observable/observable.component';
 import { OfFromComponent } from './component/observable/of-from/of-from.component';
+import { ReplayComponent } from './component/observable/replay/replay.component';
 import { RetryComponent } from './component/observable/retry/retry.component';
 import { TakeComponent } from './component/observable/take/take.component';
 import { TapComponent } from './component/observable/tap/tap.component';
@@ -32,6 +33,7 @@ const routes: Routes = [
       { path: 'take', component: TakeComponent },
       { path: 'retry', component: RetryComponent },
       { path: 'debounceTime', component: DebounceTimeComponent },
+      { path: 'replay', component: ReplayComponent },
     ],
   },
 ];

@@ -18,6 +18,7 @@ import { TakeComponent } from './component/observable/take/take.component';
 import { RetryComponent } from './component/observable/retry/retry.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DebounceTimeComponent } from './component/observable/debounce-time/debounce-time.component';
+import { ReplayComponent } from './component/observable/replay/replay.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DebounceTimeComponent } from './component/observable/debounce-time/debo
     TapComponent,
     TakeComponent,
     RetryComponent,
-    DebounceTimeComponent
+    DebounceTimeComponent,
+    ReplayComponent
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule],
   providers: [],
