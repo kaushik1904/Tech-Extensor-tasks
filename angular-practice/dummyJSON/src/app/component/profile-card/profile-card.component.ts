@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { concatMap } from 'rxjs';
 import { User } from 'src/app/model/user.model';
 import { UserService } from 'src/app/shared/service/user.service';
 
@@ -8,11 +9,10 @@ import { UserService } from 'src/app/shared/service/user.service';
   styleUrls: ['./profile-card.component.css'],
 })
 export class ProfileCardComponent {
-  userData: User | undefined;
+  userData: User | null | undefined;
   constructor(private userService: UserService) {
     this.userService.userProfile.subscribe((res) => {
-      console.log('card ' + res);
-      // this.userData = res;
+      this.userData = res;
     });
   }
 }

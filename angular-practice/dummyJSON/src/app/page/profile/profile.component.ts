@@ -12,7 +12,7 @@ export class ProfileComponent {
     this.userId = sessionStorage.getItem('id');
     this.userService.getUserData(this.userId).subscribe(
       (res) => {
-        this.userData = res;
+        // this.userData = res;
         console.log(res);
         this.userService.userProfile.next(res);
         // this.userService.userProfile.subscribe((res) => {
@@ -25,5 +25,5 @@ export class ProfileComponent {
     );
   }
   userId: string | null;
-  userData: User | undefined;
+  // userData: User | undefined;
 }
